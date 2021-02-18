@@ -1,0 +1,21 @@
+<ul class="list-unstyled">
+  <% foods.each do |food| %>
+    <li class="media mb-3">
+      <img class="mr-2 rounded" src="/assets/1907768.png" alt="" width="300px">
+      <div class="media-body">
+        <div>
+          <%= link_to food.user.name, user_path(food.user) %> <span class="text-muted">posted at <%= food.created_at %></span>
+        </div>
+        <div>
+          <p><%= food.content %></p>
+        </div>
+        <div>
+          <% if current_user == food.user %>
+            <%= link_to "Delete", food, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm' %>
+          <% end %>
+        </div>
+      </div>
+    </li>
+  <% end %>
+  <%= paginate foods %>
+</ul>

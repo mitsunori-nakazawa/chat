@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'foods/create'
+  get 'foods/destroy'
   get 'sessions/new'
   get 'sessions/create'
   get 'sessions/destroy'
@@ -17,4 +19,6 @@ Rails.application.routes.draw do
   
   get 'signup', to: 'users#new'
   resources :users, only: [:index, :show, :create]
+  
+  resources :foods, only: [:create, :destroy]
 end
