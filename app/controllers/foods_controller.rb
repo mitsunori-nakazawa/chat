@@ -23,7 +23,7 @@ class FoodsController < ApplicationController
   private
 
   def food_params
-    params.require(:food).permit(:content)
+    params.require(:food).permit(:title, :content)
   end
   
   def correct_user
