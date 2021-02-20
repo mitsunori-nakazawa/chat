@@ -17,10 +17,13 @@
 html {
     height: 100%;
 }
-header {
-    margin-bottom: 0;
-}
 
+.top-image {
+    height: 1000px;
+    background-image: url(/assets/top-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 .top-btn {
     background-color: blue;
@@ -53,4 +56,22 @@ header {
 }
 .card-body {
     text-align: center;
+}
+
+.user-btn {
+    width: 20%;
+    margin-bottom: 10px;
+}
+.user_btn {
+    display: flex;
+}
+
+.user-list {
+    display: inline-block;
+    text-align: center;
+    
+}
+.user {
+    padding-bottom: 10px;
+    padding-top: 10px;
 }

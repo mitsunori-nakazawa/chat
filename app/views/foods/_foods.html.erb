@@ -1,7 +1,7 @@
 <ul class="list-unstyled">
   <% foods.each do |food| %>
     <li class="media mb-3">
-      <img class="mr-2 rounded" src="/assets/1907768.png" alt="" width="300px">
+      <img class="mr-2 rounded" src="/assets/1907768.png" alt="" width="200px">
       <div class="media-body">
         <div>
           <%= link_to food.user.name, user_path(food.user) %> <span class="text-muted">posted at <%= food.created_at %></span>
@@ -10,9 +10,9 @@
           <p><%= food.title %></p>
           <p><%= food.content %></p>
         </div>
-        <div>
+        <div class="btn_user">
           <% if current_user == food.user %>
-            <%= link_to "Delete", food, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm' %>
+            <%= link_to "Delete", food, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm user-btn' %>
           <% end %>
           <%= render 'favorites/favorite_button', food: food %>
         </div>

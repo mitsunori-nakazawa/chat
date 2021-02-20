@@ -3,7 +3,7 @@
     <aside class="col-sm-4">
       <%= form_with(model: @food, local: true) do |f| %>
         <div class="form-group">
-          タイトル: <%= f.text_area :title, class: 'form-control', rows: 1 %>
+          都道府県: <%= f.text_area :title, class: 'form-control', rows: 1 %>
         </div>
         <div class="form-group">
           投稿: <%= f.text_area :content, class: 'form-control', rows: 5 %>
@@ -18,9 +18,9 @@
 <% else %>
   <div class="center top-image">
     <div class="text-center top-text">
-      <h1>Gourmet List</h1>
-      <p>~ 自分のお気に入りのグルメを投稿しよう ~</p>
-      <%= link_to 'Sign up!', signup_path, class: 'btn btn-lg btn-primary top-btn' %>
+      <h1>JAPAN Community</h1>
+      <p>~ 日本全国繋がる掲示板 ~</p>
+      <%= link_to 'Sign up', signup_path, class: 'btn btn-lg btn-primary top-btn' %>
       <%= link_to 'Login', login_path, class: 'btn btn-lg btn-primary top-btn' %>
     </div>
   </div>
