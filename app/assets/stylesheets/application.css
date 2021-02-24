@@ -75,3 +75,46 @@ html {
     padding-bottom: 10px;
     padding-top: 10px;
 }
+/*レスポンシブ対応*/
+
+@media screen and (max-width:500px) {
+  .top-image {
+        height: 1000px;
+    }
+  .top-text h1 {
+      font-size: 55px;
+  }
+  .navbar-title{
+      font-size: 20px;
+  }
+  .top-btn  {
+      width: auto;
+  }
+  .user-btn {
+      width: auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+/* 320pxまでの幅の場合に適応される */
+   .top-image {
+        height: 1000px;
+    }
+    .top-text h1 {
+      font-size: 40px;
+  }
+  
+  .top-btn  {
+      width: auto;
+  }
+  .user-btn {
+      width: auto;
+  }
+}
+
+@media screen and (max-width: 1025px){
+    .top-image {
+        height: 1300px;
+    }
+}
+
